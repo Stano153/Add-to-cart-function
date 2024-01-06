@@ -5,7 +5,7 @@ const pocty = [0,0,0,0,0,0,0,0,0]
 function generuj() {
     var str = '<ul class="row">';
     for (var i = 0; (i < pole_tovar.length) && (i < ceny.length); i++) {
-        str += '<li class="product col-md-6 col-lg-4 col-xl-3 pb-5 text-center"><h4>' + pole_tovar[i] + '</h4> <img src="https://placehold.co/250"> <p class="price text-success fw-bold" data-price="' + ceny[i] + '">' + ceny[i] + ' &euro;</p> <button type="button" class="text-dark bg-white btn btn-outlineprimary btn-block" onclick="addToCart(' + i + ')" >pridaj do kosika</button></li> ' ;
+        str += '<li class="product col-md-6 col-lg-4 col-xl-3 pb-5 text-center"><h4>' + pole_tovar[i] + '</h4> <img src="https://placehold.co/250"> <p class="price text-success fw-bold" data-price="' + ceny[i] + '">' + ceny[i] + ' &euro;</p> <button type="button" class="text-dark bg-white btn btn-outlineprimary btn-block col-8" onclick="addToCart(' + i + ')" >pridaj do kosika</button></li> ' ;
     }
     str += '</ul>';
     document.getElementById('products').innerHTML += str;
