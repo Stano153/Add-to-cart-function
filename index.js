@@ -53,3 +53,5 @@ function clearCart() {
     updateCartItems();
     updateCartTotal();
 }
+
+document.addEventListener('DOMContentLoaded', generuj);
