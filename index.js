@@ -5,7 +5,7 @@ const pocty = [0,0,0,0,0,0,0,0,0]
 function generuj() {
     var str = '<ul class="row">';
     for (var i = 0; (i < pole_tovar.length) && (i < ceny.length); i++) {
-        str += '<li class="col-md-6 col-lg-4 col-xl-3"><h4>' + pole_tovar[i] + '</h4> <p class="price" data-price="' + ceny[i] + '">' + ceny[i] + ' &euro;</p> <button onclick="addToCart(' + i + ')" >pridaj do kosika</button></li> ' ;
+        str += '<li class="product col-md-6 col-lg-4 col-xl-3 pb-5 text-center"><h4>' + pole_tovar[i] + '</h4> <img src="https://placehold.co/250"> <p class="price text-success fw-bold" data-price="' + ceny[i] + '">' + ceny[i] + ' &euro;</p> <button type="button" class="text-dark bg-white btn btn-outlineprimary btn-block" onclick="addToCart(' + i + ')" >pridaj do kosika</button></li> ' ;
     }
     str += '</ul>';
     document.getElementById('products').innerHTML += str;
@@ -33,10 +33,23 @@ function updateCartItems() {
     }
 }
 
-function updateCartTotal(price) {
+function updateCartTotal() {
     const cartTotalElement = document.getElementById('cart-total');
-    const currentTotal = parseFloat(cartTotalElement.textContent);
-    const newTotal = (currentTotal + price).toFixed(2);
+    let newTotal = 0;
+
+    for (let i = 0; i < pocty.length; i++) {
+        newTotal += pocty[i] * ceny[i];
+    }
+
+    newTotal = newTotal.toFixed(2);
     cartTotalElement.textContent = newTotal;
 }
 
+function clearCart() {
+    for (let i = 0; i < pocty.length; i++) {
+        pocty[i] = 0;
+    }
+    
+    updateCartItems();
+    updateCartTotal();
+}

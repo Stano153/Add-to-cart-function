@@ -19,11 +19,11 @@
     <main>
         <aside>
             <nav>
-                <ul>
-                    <li><a href="#">uvod</a></li>
-                    <li><a href="#">ponuka</a></li>
-                    <li><a href="#">objednavka</a></li>
-                    <li><a href="#">kontakt</a></li>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link">uvod</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">ponuka</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">objednavka</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">kontakt</a></li>
                 </ul>
             </nav>
 
@@ -31,6 +31,8 @@
                 <h3>Nakupny kosik</h3>
                 <ul id="cart-items"></ul>
                 <p>Celkova cena: <span id="cart-total">0.00</span> &euro;</p>
+                <div id="cart-button"></div>
+                <button class="bg-danger text-white btn btn-outlinedanger" onclick="clearCart()">Vymazat kosik</button>
 
             </div>
         </aside>
@@ -41,62 +43,6 @@
             <div id="products">
                 
 
-                <!-- <ul class="row">
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Jemná Hnedá Harmonia</h4>
-                        <img src="" alt="">
-                        <p class="price" value="120">120 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Čokoládový Zvrat</h4>
-                        <img src="" alt="">
-                        <p class="price" value="85">85 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Luxusná Tmavá Poézia</h4>
-                        <img src="" alt="">
-                        <p class="price" value="150">150 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Karamelový Delight</h4>
-                        <img src="" alt="">
-                        <p class="price" value="110">110 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Horká Čokoláda Zázrak</h4>
-                        <img src="" alt="">
-                        <p class="price" value="95">95 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Čokoládový Slávnostný Únik</h4>
-                        <img src="" alt="">
-                        <p class="price" value="130">130 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Exotický Príliv Čokolády</h4>
-                        <img src="" alt="">
-                        <p class="price" value="140">140 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Hladká Mliečna Melódia</h4>
-                        <img src="" alt="">
-                        <p class="price" value="75">75 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                    <li class="col-md-6 col-lg-4 col-xl-3">
-                        <h4>Čokoládová Nostalgia Noir</h4>
-                        <img src="" alt="">
-                        <p class="price" value="2.62">2.62 &euro;</p>
-                        <button>pridaj do kosika</button>
-                    </li>
-                </ul> -->
             </div>
         </article>
 

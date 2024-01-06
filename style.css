@@ -6,20 +6,13 @@
 }
 
 nav {
-    width: 100%;
-    border:2px solid black;
+    border:3px solid black;
 }
 
 aside {
     margin: 1em;
 }
 
-nav ul {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 0;
-    padding: 10px 10px;
-}
 
 .cart {
     background-color: orange;
@@ -31,6 +24,10 @@ nav ul {
     background-color: brown;
     color: #fff;
     padding: 0.5em 1em;
+}
+
+.price, .nav-item {
+    font-weight: bold;
 }
 
 
